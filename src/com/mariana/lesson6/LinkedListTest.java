@@ -12,7 +12,7 @@ public class LinkedListTest {
         list.add("Test");
         list.remove(0);
         list.addFirst("Test123");
-        list.
+
 
     }
 
