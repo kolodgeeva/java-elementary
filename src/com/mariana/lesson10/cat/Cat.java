@@ -29,7 +29,7 @@ public class Cat implements WithNameAndAge {
 
     @Override
     public String toString() {
-        return "Cat{" +
+        return "Car{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';

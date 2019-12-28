@@ -17,7 +17,7 @@ public class AnyClass {
         System.out.println(cat2);
 
         System.out.println(new StringBuffer()
-                .append("Cat count: ")
+                .append("Car count: ")
                 .append(Cat.getCatCount()));
     }
 }

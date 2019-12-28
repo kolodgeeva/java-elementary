@@ -1,19 +1,32 @@
 package com.mariana.test;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.function.Predicate;
+
 public class Main {
 
-    public static void main(String[] args) {
-        Train train = new Train("blue", 4045, 1000 ,4,3);
-        train.draw();
-        System.out.println();
+    public static void main(String[] args) throws Exception {
+        List<Car> autos = new ArrayList<>();
+        autos.add(new Car(2000, "Sedan"));
+        autos.add(new Car(1500, "Smart"));
+        autos.add(new Car(1750, "Sedan"));
+        autos.add(new Car(2400, "Truck"));
+        autos.add(new Car(1400, "Sedan"));
+        Predicate<Car> func = c -> c.getWeight() < 2000 && c.getType().toLowerCase().equals("sedan");
+        autos.forEach(c -> {
+            if(func.test(c)) System.out.println(c);
+        });
 
-        System.out.println("-------------");
+        autos.forEach(car -> {
 
-        Airplane plane = new Airplane("white", 170, 76,19, 6);
-        plane.draw();
 
-        System.out.println(train);
-        System.out.println(plane);
+
+            System.out.println(car);
+        });
+
+
 
     }
 }
