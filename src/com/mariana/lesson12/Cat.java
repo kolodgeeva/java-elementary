@@ -6,9 +6,23 @@ public class Cat implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public String name;
-    public int age;
-    public int weight;
+    private String name;
+
+    transient private int age;
+
+    private int weight;
+
+    private Passport passport;
+
+    public Cat() {
+    }
+
+    public Cat(String name, int age, int weight, Passport passport) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.passport = passport;
+    }
 
     @Override
     public String toString() {
@@ -16,6 +30,7 @@ public class Cat implements Serializable {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
+                ", passport=" + passport +
                 '}';
     }
 }
