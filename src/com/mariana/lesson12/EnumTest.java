@@ -9,7 +9,7 @@ public class EnumTest {
 
         Apple apple = Apple.valueOf("RedDel");
 
-        Apple apple1 = Apple.Jonathan;
+        Apple apple1 = Apple.JONATHAN;
 
 
         switch (apple) {
@@ -19,7 +19,7 @@ public class EnumTest {
                         apple.getPrice(),
                         apple.getColor()));
                 break;
-            case Jonathan:
+            case JONATHAN:
                 System.out.println(apple.toString());
                 break;
             case GoldenDel:
